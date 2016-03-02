@@ -1,0 +1,68 @@
+<html>
+  <style type="text/css" media="screen">
+    #e1 {
+  
+  display: inline-block;
+  margin-left: 150px;
+  width: 100;
+  background-color: red;
+}
+#e2 {
+  
+  display: inline-block;
+  margin-left: 150px;
+  width: 100;
+  margin-bottom: 10px;
+  background-color: red;
+}
+#e3 {
+  
+  display: inline-block;
+  margin-left: 110px;
+  width: 100;
+  background-color: red;
+}
+
+#an {
+  margin-left: 380px;
+}
+
+
+#val {
+  margin-left: 120px;
+}
+  </style>
+  <div align=left>
+    <form method="POST" action="saisie.php" onsubmit="return Tester();"> 
+     Numero de l'eleve <input type="text"  name="num" id="num"/>
+     <br />
+      <hr>
+      <br />
+      <div id="e1">
+        Matieres 
+      </div>
+      <div id="e2">
+        Note du DC
+      </div>
+      <div id="e3">
+        Note du DS
+      </div>
+      <br>
+      <select name="matiere" id="matiere">
+        <option selected>Choisir une matiere:</option>
+        <option value="algo">Algorithmique et programmation</option>
+        <option value="bd">Bases de donnees</option>
+        <option  value="tic">Technologies de l'information et de la communication</option>
+      </select>
+      <input type="text"  name="dc" id="dc"/>
+      <input type="text"  name="ds" id="ds"/>
+      <br>
+      <input type="button" value="Annuler" name="an" id="an" onclick="Annuler();"/>
+      <input type="submit" value="Valider" name="val" id="val"/>
+    </form>
+  </div>
+
+  <script src="test.js" type="text/javascript" charset="utf-8">
+    
+  </script>
+</html>
