@@ -6,8 +6,7 @@ if (isset($_POST['num']) && isset($_POST['dc']) && isset($_POST['ds'])) {
     $c = $_POST['matiere'];
     $dc = $_POST['dc'];
     $ds = $_POST['ds'];
-
-    
+    echo "$s $c $dc $ds <br>";
     $q = mysql_query('SELECT * From Eleve WHERE Numero='.$s);
     $data = mysql_fect_array($q);
     if (!($data)) {
@@ -23,7 +22,6 @@ if (isset($_POST['num']) && isset($_POST['dc']) && isset($_POST['ds'])) {
         }
         else {
             
-     
             // Inserer Un nouvelle ligne
             if (mysql_query('INSERT INTO Note VALUES( $s , $c , $dc , $ds )')) {
                 echo "<javascript>Valeurs inserer avec succees</javascript>";
