@@ -6,9 +6,8 @@ if (isset($_POST['num']) && isset($_POST['dc']) && isset($_POST['ds'])) {
     $c = $_POST['matiere'];
     $dc = $_POST['dc'];
     $ds = $_POST['ds'];
-    $q = mysql_query("SELECT * From Eleve WHERE Numero= $s ;");
-    echo $q;
-    var_dump($q);
+    $q = mysql_query("SELECT * FROM Eleve WHERE Numero=$s;");
+    echo "SELECT * FROM Eleve WHERE Numero=$s;";
     $data = mysql_fetch_array($q);
     if (!($data)) {
         echo "<javascript>alert('Eleve non Inscrit');</javascript>";
@@ -16,7 +15,7 @@ if (isset($_POST['num']) && isset($_POST['dc']) && isset($_POST['ds'])) {
     else {
         
         // Verifier si les notes sont deja saisie
-        $q = mysql_query("SELECT * FROM Note WHERE NumEleve= $s ;");
+        $q = mysql_query("SELECT * FROM Note WHERE NumEleve=$s;");
         $notes = mysql_fetch_array($q);
         if ($notes) {
             // le cas ou les notes sont deja saisie
