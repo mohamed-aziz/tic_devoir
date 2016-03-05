@@ -4,7 +4,6 @@ mysql_select_db('BDdevoir1');
 if (isset($_POST['num']) && isset($_POST['dc']) && isset($_POST['ds'])) {
     $s = $_POST['num'];
     $c = $_POST['matiere'];
-    echo $c;
     $dc = $_POST['dc'];
     $ds = $_POST['ds'];
 
@@ -24,23 +23,17 @@ if (isset($_POST['num']) && isset($_POST['dc']) && isset($_POST['ds'])) {
         }
         else {
             
-            //Obtenir le code de matiere.
-            if ($c!='Choisir Une matiere:') {
-                $code = mysql_fetch_array(
-                    mysql_query('SELECT Code FROM Matiere WHERE Libelle='. $s))['CodeMatiere'];
-
-                echo $code;
-                
-                // Inserer Un nouvelle ligne
-                if (mysql_query('INSERT INTO Note VALUES( $s, $code, $dc, $ds )')) {
-                    echo "<javascript>Valeurs inserer avec succees</javascript>";
+     
+            // Inserer Un nouvelle ligne
+            if (mysql_query('INSERT INTO Note VALUES( $s , $c , $dc , $ds )')) {
+                echo "<javascript>Valeurs inserer avec succees</javascript>";
                     
-                }
-                else {
-                    echo "<javascript>Notes non Inserer</javascript>";
-                }
-                
             }
+            else {
+                echo "<javascript>Notes non Inserer</javascript>";
+            }
+                
+    
         }
     }
     
