@@ -3,8 +3,9 @@
 
 table, th, td {
   color: grey;
-  border: 2px solid yellow;
+  border: 2px solid lightblue;
    border-collapse: collapse;
+    padding: 30px;
 }
 </style>
 <?php
