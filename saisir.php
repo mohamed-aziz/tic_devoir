@@ -24,13 +24,12 @@ if (isset($_POST['num']) && isset($_POST['dc']) && isset($_POST['ds'])) {
             
             // Inserer Un nouvelle ligne
             if (mysql_query("INSERT INTO Note VALUES( \"$s\" , \"$c\" , $dc , $ds ) ;")) {
-                echo "<javascript>Valeurs inserer avec succees</javascript>";
+                echo "<javascript>alert(Valeurs inserer avec succees)</javascript>";
             }
             else {
-                echo "<javascript>Notes non Inserer</javascript>";
+                echo "<javascript>alert(Notes non Inserer);</javascript>";
             }
                 
-    
         }
     }
     
