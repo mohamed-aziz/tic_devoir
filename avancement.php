@@ -18,7 +18,7 @@ $nbAlgo =nb('Algo');
 $nbTic = nb('TIC');
 $nbBD = nb('BD');
 echo "<tr><td>Algorithmique</td><td>BD</td><td>TIC</td></tr>";
-echo "<tr><td>$nbAlgo</td> <td>$nbBD</td> <td>$nbTic</td> </tr>"
+echo "<tr><td>$nbAlgo</td> <td>$nbBD</td> <td>$nbTic</td> </tr>";
 echo "</table>";
 mysql_close();
 ?>
