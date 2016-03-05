@@ -15,9 +15,9 @@ echo "<table>";
 // Obtenir le numero d'eleves
 $q = mysql_query("SELECT COUNT(*) as total FROM Eleve");
 $nbeleves = mysql_fetch_assoc($q)['total'];
-$nbAlgo =nb('Algo', $nbeleves);
-$nbTic = nb('TIC', $nbeleves);
-$nbBD = nb('BD', $nbeleves);
+$nbAlgo = nb("Algo", $nbeleves);
+$nbTic = nb("TIC", $nbeleves);
+$nbBD = nb("BD", $nbeleves);
 echo "<tr><td>Algorithmique</td><td>BD</td><td>TIC</td></tr>";
 echo "<tr><td>$nbAlgo</td> <td>$nbBD</td> <td>$nbTic</td> </tr>";
 echo "</table>";
