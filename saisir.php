@@ -4,7 +4,7 @@ mysql_select_db('BDdevoir1');
 if (isset($_POST['num']) && isset($_POST['dc']) && isset($_POST['ds'])) {
     $s = $_POST['num'];
     $c = $_POSTE['matiere'];
-    echo c;
+    echo $c;
     $dc = $_POST['dc'];
     $ds = $_POST['ds'];
 
