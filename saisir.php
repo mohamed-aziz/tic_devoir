@@ -1,12 +1,12 @@
 <?php
 mysql_connect('localhost', 'root', 'mohamed');
 mysql_select_db('BDdevoir1');
-if (isset($_POST['num']) && isset($_POST['e2']) && isset($_POST['e3'])) {
+if (isset($_POST['num']) && isset($_POST['dc']) && isset($_POST['ds'])) {
     $s = $_POST['num'];
-    $c = $_POSTE['e1'];
+    $c = $_POSTE['matiere'];
     echo c;
-    $dc = $_POST['e2'];
-    $ds = $_POST['e3'];
+    $dc = $_POST['dc'];
+    $ds = $_POST['ds'];
 
     
     $q = mysql_query('SELECT * From Eleve WHERE Numero='.$s);
