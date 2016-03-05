@@ -7,9 +7,9 @@ if (isset($_POST['num']) && isset($_POST['dc']) && isset($_POST['ds'])) {
     $dc = $_POST['dc'];
     $ds = $_POST['ds'];
     $q = mysql_query("SELECT * From Eleve WHERE Numero= $s ;");
-    $data = mysql_fetch_array($q);
-    var_dump($data);
     echo $q;
+    var_dump($q);
+    $data = mysql_fetch_array($q);
     if (!($data)) {
         echo "<javascript>alert('Eleve non Inscrit');</javascript>";
     }
