@@ -1,5 +1,11 @@
 <html>
 <style>
+
+table, th, td {
+  color: grey;
+  border: 2px solid yellow;
+   border-collapse: collapse;
+}
 </style>
 <?php
 
@@ -18,7 +24,7 @@ $nbAlgo = nb("Algo", $nbeleves);
 $nbTic = nb("TIC", $nbeleves);
 $nbBD = nb("BD", $nbeleves);
 echo "<tr><td>Algorithmique</td><td>BD</td><td>TIC</td></tr>";
-echo "<tr><td>$nbAlgo</td> <td>$nbBD</td> <td>$nbTic</td> </tr>";
+echo "<tr><td>$nbAlgo%</td> <td>$nbBD%</td> <td>$nbTic%</td> </tr>";
 echo "</table>";
 mysql_close();
 ?>
