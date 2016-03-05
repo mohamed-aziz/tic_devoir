@@ -10,7 +10,7 @@ mysql_select_db('BDdevoir1');
 echo "<table>";
 // Obtenir le numero d'eleves
 $q = mysql_query("SELECT COUNT(*) FROM Eleve");
-var_dump(mysq_fetch_row($q));
+ecoh mysq_fetch_row($q);
 echo "</table>";
 mysql_close();
 ?>
