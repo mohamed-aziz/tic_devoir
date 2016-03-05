@@ -4,7 +4,7 @@
 <?php
 
 function nb($s, $nbeleves) {
-echo mysql_fetch_assoc(mysql_query("SELECT COUNT(*) as total FROM Eleve WHERE CodeMatiere=\"$s\""))['total'];
+var_dump(mysql_fetch_assoc(mysql_query("SELECT COUNT(*) as total FROM Eleve WHERE CodeMatiere='Algo'")));
 return (intval(mysql_fetch_assoc(mysql_query("SELECT COUNT(*) as total FROM Eleve where CodeMatiere=\"$s\""))['total']) / $nbeleves) * 100;
 }
 
