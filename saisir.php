@@ -3,7 +3,7 @@ mysql_connect('localhost', 'root', 'mohamed');
 mysql_select_db('BDdevoir1');
 if (isset($_POST['num']) && isset($_POST['dc']) && isset($_POST['ds'])) {
     $s = $_POST['num'];
-    $c = $_POSTE['matiere'];
+    $c = $_POST['matiere'];
     echo $c;
     $dc = $_POST['dc'];
     $ds = $_POST['ds'];
