@@ -19,6 +19,7 @@ if (isset($_POST['num']) && isset($_POST['dc']) && isset($_POST['ds'])) {
         if ($notes) {
             // le cas ou les notes sont deja saisie
             var_dump($notes);
+            echo "<script>alert('Notes deja saisie')</script>";
         }
         else {
             
