@@ -9,12 +9,12 @@ if (isset($_POST['num']) && isset($_POST['dc']) && isset($_POST['ds'])) {
     $q = mysql_query("SELECT * FROM Eleve WHERE Numero=\"$s\";");
     $data = mysql_fetch_array($q);
     if (!($data)) {
-        echo "<javascript>alert('Eleve non Inscrit');</javascript>";
+        echo "<script>alert('Eleve non Inscrit');</script>";
     }
     else {
         
         // Verifier si les notes sont deja saisie
-        $q = mysql_query("SELECT * FROM Note WHERE NumEleve=\"$s\";");
+        $q = mysql_query("SELECT * FROM Note WHERE NumEleve='$s' AND CodeMatiere='$c';");
         $notes = mysql_fetch_array($q);
         if ($notes) {
             // le cas ou les notes sont deja saisie
@@ -24,10 +24,10 @@ if (isset($_POST['num']) && isset($_POST['dc']) && isset($_POST['ds'])) {
             
             // Inserer Un nouvelle ligne
             if (mysql_query("INSERT INTO Note VALUES( \"$s\" , \"$c\" , $dc , $ds ) ;")) {
-                echo "<javascript>alert(Valeurs inserer avec succees)</javascript>";
+                echo "<script>alert(Valeurs inserer avec succees)</script>";
             }
             else {
-                echo "<javascript>alert(Notes non Inserer);</javascript>";
+                echo "<script>alert(Notes non Inserer);</script>";
             }
                 
         }

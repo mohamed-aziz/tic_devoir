@@ -1,0 +1,7 @@
+
+<?php
+$q = mysql_query("SELECT * FROM Eleve WHERE Numero=\"$s\";");
+$data = mysql_fetch_array($q);
+
+
+?>
